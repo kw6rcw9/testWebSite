@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+   
+    {% for post in news %}
+        <div class="alert alert-light">
+            <h1>{{ post.title }}</h1>
+            <p>{{post.text}}</p>
+            <span class="text-muted">Publication: {{post.date}}</span>
+            {% if post.autor %}
+                <p><b>Autor:</b> <mark>{{post.autor}}</mark></p>
+            {% else %}
+                <p><b>Autor:</b> <mark>Admin</mark></p>
+            {%endif%}
+        </div>
+    {% endfor %}
+
+{% endblock %}
+
+{% block aside_block %}
+   
+
+<h4 class="mt-2">Cool articles</h4>
+               
+                <img src="https://itproger.com/img/news/1589893627.jpg" class="img-thumbnail ">
+                <p> A 2D game on python!</p>
+                <a href="https://itproger.com/news/285" target="_blank">
+                    <button class="btn btn-warning">Check</button>
+                </a>
+                <img src="https://itproger.com/img/news/1591879929.jpg" class="img-thumbnail mt-4">
+                <p> cool engine Dodot. Check this out!</p>
+                <a href="https://itproger.com/news/285" target="_blank">
+                    <button class="btn btn-warning">Check</button>
+                </a>
+{% endblock %}
