@@ -4,12 +4,13 @@
 {% endblock %}
 
 {% block content %}
+    {{news}}
    
     {% for post in news %}
         <div class="alert alert-light">
             <h1>{{ post.title }}</h1>
             <p>{{post.text}}</p>
-            <span class="text-muted">Publication: {{post.date}}</span>
+            <span class="text-muted">Publication: {{post.date |date:"j F Y, время: H:i:s"}}</span>
             {% if post.autor %}
                 <p><b>Autor:</b> <mark>{{post.autor}}</mark></p>
             {% else %}
