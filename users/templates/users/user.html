@@ -1,15 +1,13 @@
 {% extends 'main/base.html' %}
 {% block title %}
-    {{title}}
+    Auth page
 {% endblock %}
 {% block content %}
-    <h1>{{title}}</h1>
-    <form method="post" class="form-register">
+    <h1>Auth page</h1>
+    <form method="post" class="form-register auth">
         {% csrf_token %}
         {{form.as_p}}
-        <button class="btn btn-outline-warning" type="submit">Register</button>
-        <hr>
-        <p>Already signed up?<a href="{% url 'user' %}">Log in</a></p>
+        <button class="btn btn-outline-warning" type="submit">Log in</button>
     </form>
     
 {% endblock %}

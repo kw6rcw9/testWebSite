@@ -1,16 +1,10 @@
 {% extends 'main/base.html' %}
 {% block title %}
-    {{title}}
+   You loged out successfull!
 {% endblock %}
 {% block content %}
-    <h1>{{title}}</h1>
-    <form method="post" class="form-register">
-        {% csrf_token %}
-        {{form.as_p}}
-        <button class="btn btn-outline-warning" type="submit">Register</button>
-        <hr>
-        <p>Already signed up?<a href="{% url 'user' %}">Log in</a></p>
-    </form>
+    <h1>You loged out successfull!</h1>
+    <a href="{%  url 'user' %}">Log in again</a>
     
 {% endblock %}
 
