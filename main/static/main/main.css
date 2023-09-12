@@ -26,6 +26,13 @@ body{
     padding: 2%;
 }
 
+.user_images{
+    width: 64px;
+    height: 64;
+    border-radius: 50%;
+    margin-right: 15px;
+
+}
 footer {
     width: 65%;
     margin-left:20%;
