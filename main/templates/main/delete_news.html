@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+{% block title %}
+    Removing article
+{% endblock %}
+{% block content %}
+    <h1>Are you sure?</h1>
+    <form method="post" class="form-register auth">
+        {% csrf_token %}
+        
+        <button class="btn btn-outline-danger" type="submit">Yes</button>
+      <a href="{% url 'news-detail' object.id %}">No</a>
+    </form>
+    
+{% endblock %}
+
+{% block aside_block %}
+   
+
+<h4 class="mt-2">Cool articles</h4>
+                <img src="https://itproger.com/img/news/1591879929.jpg" class="img-thumbnail">
+                <p> cool engine Dodot. Check this out!</p>
+                <a href="https://itproger.com/news/285" target="_blank">
+                    <button class="btn btn-warning">Check</button>
+                </a>
+                <img src="https://itproger.com/img/news/1589893627.jpg" class="img-thumbnail mt-4">
+                <p> A 2D game on python!</p>
+                <a href="https://itproger.com/news/285" target="_blank">
+                    <button class="btn btn-warning">Check</button>
+                </a>
+{% endblock %}

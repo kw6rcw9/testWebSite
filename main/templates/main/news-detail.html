@@ -5,9 +5,7 @@
 
 {% block content %}
     
-   
-    {% for post in news %}
-        <div class="alert alert-light">
+           <div class="alert alert-light">
             <h1>{{ post.title }}</h1>
             <p>{{post.text}}</p>
             <div class="row">
@@ -19,9 +17,13 @@
                 <span class="text-muted">Publication: {{post.date |date:"d E Y в: H:i"}}</span>
                     <p><b>Autor:</b> <mark>{{post.autor}}</mark></p>
             </div>
-            <a href="{% url 'news-detail' post.id %}" class="btn btn-outline-warning mt-3">Read next</a>
+            {% if object.autor == user %}
+            <hr>
+            <a href="{% url 'news-update' object.id %}" class="btn btn-info">Update</a>
+            <a href="{% url 'news-update' object.id %}" class="btn btn-danger">Delete</a>
+            {% endif %}
         </div>
-    {% endfor %}
+
 
 {% endblock %}
 

@@ -17,7 +17,7 @@ body{
     color: #ca5858;
     font-weight: bold;
 }
-.form-register.auth input {
+.form-register.auth input, .form-register.auth textarea {
     display: block;
     width: 96%;
     margin-top: 5px;
@@ -26,6 +26,9 @@ body{
     padding: 2%;
 }
 
+.ml-2{
+    margin-left: 10px;
+}
 .user_images{
     width: 64px;
     height: 64;
